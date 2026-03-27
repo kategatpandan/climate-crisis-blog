@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>The Anatomy of a Crisis – deep climate blog</title>
+    <!-- Font Awesome 6 (free) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- modern typefaces: Inter + Fraunces -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="journal-container">
+        <!-- HOME SCREEN -->
+        <div id="home-screen" class="screen active">
+            <!-- Hero Section -->
+            <div class="home-floating-nav">
+                <a href="#" id="homeNavHome"><i class="fas fa-home"></i> Home</a>
+                <a href="#" id="homeNavAbout"><i class="fas fa-info-circle"></i> About</a>
+                <a href="#" id="homeNavBlog"><i class="fas fa-blog"></i> Blog</a>
+                <a href="#" id="homeNavGallery"><i class="fas fa-camera"></i> Gallery</a>
+            </div>
+            <div class="hero-section">
+                <img class="hero-image" src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=1600&h=600&fit=crop" alt="Climate crisis landscape">
+                <div class="hero-overlay">
+                    <div class="hero-content">
+                        <h1 class="hero-title">The Anatomy of a Crisis</h1>
+                        <p class="hero-subtitle">warming · shifting · disappearing</p>
+                        <div class="hero-scroll-indicator">
+                            <span>scroll to read about this blog</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- About Card - Expanded with more details -->
+            <div class="intro-card glass">
+                <h2><i class="fas fa-leaf"></i> About this Blog</h2>
+                <p><strong>Student Project · IT + Environment ·</strong> A comprehensive exploration of our planet's most pressing crisis, the interconnected threats of global warming, climate change impacts, and continuing biodiversity loss.</p>
+                
+                <div style="margin: 1.2rem 0;">
+                    <h3 style="font-family: 'Fraunces', serif; font-size: 1.3rem; color: #6a9c6e; margin-bottom: 0.5rem;"><i class="fas fa-bullseye"></i> Our Mission</h3>
+                    <p>This blog aims to bridge the gap between scientific understanding and everyday awareness. Through eight carefully researched sections, we break down complex environmental issues into accessible, actionable knowledge that empowers readers to understand the crisis and take meaningful action.</p>
+                </div>
+
+                <div style="margin: 1.2rem 0;">
+                    <h3 style="font-family: 'Fraunces', serif; font-size: 1.3rem; color: #6a9c6e; margin-bottom: 0.5rem;"><i class="fas fa-globe"></i> A Global Perspective</h3>
+                    <p>Climate change, global warming, and biodiversity loss know no borders, they affect every corner of the planet. From melting polar ice caps to burning rainforests, from rising sea levels to devastating droughts, the evidence is everywhere. While these impacts vary across regions, the urgency of the crisis is shared by all. This blog explores the global nature of these environmental challenges while recognizing that effective solutions must be adapted to local contexts, cultures, and communities.</p>
+                </div>
+
+                <div style="margin: 1.2rem 0;">
+                    <h3 style="font-family: 'Fraunces', serif; font-size: 1.3rem; color: #6a9c6e; margin-bottom: 1rem;"><i class="fas fa-graduation-cap"></i> Educational Approach</h3>
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.5rem 1.5rem;">
+                        <div style="display: flex; align-items: flex-start; gap: 8px;">
+                            <i class="fas fa-globe-americas" style="color: #bbda9e; font-size: 0.95rem; min-width: 22px; margin-top: 2px;"></i>
+                            <div style="flex: 1;">
+                                <span style="font-weight: 600; color: #bbda9e; display: inline-block;">Real-world examples:</span>
+                                <span style="color: var(--text-soft); margin-left: 6px;">Global case studies and tangible impacts</span>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: flex-start; gap: 8px;">
+                            <i class="fas fa-lightbulb" style="color: #bbda9e; font-size: 0.95rem; min-width: 22px; margin-top: 2px;"></i>
+                            <div style="flex: 1;">
+                                <span style="font-weight: 600; color: #bbda9e; display: inline-block;">Solutions-oriented:</span>
+                                <span style="color: var(--text-soft); margin-left: 6px;">What works and how you can help</span>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: flex-start; gap: 8px;">
+                            <i class="fas fa-link" style="color: #bbda9e; font-size: 0.95rem; min-width: 22px; margin-top: 2px;"></i>
+                            <div style="flex: 1;">
+                                <span style="font-weight: 600; color: #bbda9e; display: inline-block;">Curated resources:</span>
+                                <span style="color: var(--text-soft); margin-left: 6px;">Deeper learning and exploration</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Centered Read the Blog Button -->
+                <div style="text-align: center; margin-top: 1.5rem; display: flex; justify-content: center;">
+                    <button class="blog-button" id="openBlogBtn">
+                        Read the 8-Part Blog
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile References Dropdown - Only visible on mobile -->
+            <div class="mobile-ref-dropdown">
+                <div class="mobile-ref-header" onclick="toggleMobileRefs()">
+                    <h4><i class="fas fa-book"></i> References & Resources</h4>
+                    <i class="fas fa-chevron-down dropdown-icon"></i>
+                </div>
+                <div class="mobile-ref-content" id="mobileRefContent">
+                    <!-- Global Warming Causes -->
+                    <a href="https://www.nrdc.org/stories/global-warming-101" target="_blank" rel="noopener noreferrer" class="mobile-ref-item">
+                        <i class="fas fa-industry"></i>
+                        <span>nrdc.org/stories/global-warming-101</span>
+                    </a>
+                    <a href="https://www.nationalgeographic.com/environment/article/global-warming-overview" target="_blank" rel="noopener noreferrer" class="mobile-ref-item">
+                        <i class="fas fa-industry"></i>
+                        <span>https://www.nationalgeographic.com/environment/article/global-warming-overview</span>
+                    </a>
+                    
+                    <!-- Climate Change Impact -->
+                    <a href="https://wmo.int/topics/climate-change/" target="_blank" rel="noopener noreferrer" class="mobile-ref-item">
+                        <i class="fas fa-cloud-sun"></i>
+                        <span>https://wmo.int/topics/climate-change/</span>
+                    </a>
+                    
+                    <!-- Biodiversity Loss -->
+                    <a href="https://share.google/oSv6HBVv9RlT3JSwx" target="_blank" rel="noopener noreferrer" class="mobile-ref-item">
+                        <i class="fas fa-dove"></i>
+                        <span>https://share.google/oSv6HBVv9RlT3JSwx</span>
+                    </a>
+                    
+                    <!-- Ocean Crisis -->
+                    <a href="https://share.google/lDZfPRleEJTsGnG0q" target="_blank" rel="noopener noreferrer" class="mobile-ref-item">
+                        <i class="fas fa-water"></i>
+                        <span>https://share.google/lDZfPRleEJTsGnG0q</span>
+                    </a>
+                    
+                    <!-- Food & Agriculture -->
+                    <a href="https://share.google/cU0S4OLlbfr6Enuta" target="_blank" rel="noopener noreferrer" class="mobile-ref-item">
+                        <i class="fas fa-apple-alt"></i>
+                        <span>https://share.google/cU0S4OLlbfr6Enuta</span>
+                    </a>
+                    <a href="https://share.google/Lya5dwTfwOaKvVp9O" target="_blank" rel="noopener noreferrer" class="mobile-ref-item">
+                        <i class="fas fa-apple-alt"></i>
+                        <span>https://share.google/Lya5dwTfwOaKvVp9O</span>
+                    </a>
+
+                    <!-- Urban Heat -->
+                    <a href="https://share.google/SOdjE95qVjmkvDKfS" target="_blank" rel="noopener noreferrer" class="mobile-ref-item">
+                        <i class="fas fa-city"></i>
+                        <span>https://share.google/SOdjE95qVjmkvDKfS</span>
+                    </a>
+                    
+                    <!-- Solutions -->
+                    <a href="https://share.google/vep69jms9kUiny8Wj" target="_blank" rel="noopener noreferrer" class="mobile-ref-item">
+                        <i class="fas fa-solar-panel"></i>
+                        <span>https://share.google/vep69jms9kUiny8Wj</span>
+                    </a>
+                    
+                    <!-- Why It Matters -->
+                    <a href="https://share.google/xNCo0fnHHMI20kUn8" target="_blank" rel="noopener noreferrer" class="mobile-ref-item">
+                        <i class="fas fa-seedling"></i>
+                        <span>https://share.google/xNCo0fnHHMI20kUn8</span>
+                    </a>
+                    <a href="https://share.google/cUBMPvHuub9uECtBh" target="_blank" rel="noopener noreferrer" class="mobile-ref-item">
+                        <i class="fas fa-seedling"></i>
+                        <span>https://share.google/cUBMPvHuub9uECtBh</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- References Grid -->
+            <div class="ref-grid">
+                <h4 style="grid-column:1/-1; font-size:1.3rem; color:#bbda9e; margin-bottom: 0.5rem;"><i class="fas fa-book"></i> References & Sources</h4>
+                <div style="grid-column:1/-1; margin-bottom: 0.5rem;">
+                    <p style="color: var(--text-soft); font-size: 0.85rem;">All information in this blog is sourced from reputable organizations, research institutions, and scientific reports. Click any link to explore the original source.</p>
+                </div>
+                
+                <!-- Topic 01 - Global Warming Causes -->
+                <a href="https://www.nrdc.org/stories/global-warming-101" target="_blank" rel="noopener noreferrer"><i class="fas fa-industry"></i> https://www.nrdc.org/stories/global-warming-101</a>
+                <a href="https://www.nationalgeographic.com/environment/article/global-warming-overview" target="_blank" rel="noopener noreferrer"><i class="fas fa-industry"></i>https://www.nationalgeographic.com/environment/article/global-warming-overview</a>
+                
+                <!-- Topic 02 - Climate Change Impact -->
+                <a href="https://wmo.int/topics/climate-change/" target="_blank" rel="noopener noreferrer"><i class="fas fa-cloud-sun"></i> https://wmo.int/topics/climate-change/</a>
+
+                <!-- Topic 03 - Biodiversity Loss -->
+                <a href="https://share.google/oSv6HBVv9RlT3JSwx" target="_blank" rel="noopener noreferrer"><i class="fas fa-dove"></i> https://share.google/oSv6HBVv9RlT3JSwx</a>
+
+                <!-- Topic 04 - Ocean Crisis -->
+                <a href="https://share.google/lDZfPRleEJTsGnG0q" target="_blank" rel="noopener noreferrer"><i class="fas fa-water"></i> https://share.google/lDZfPRleEJTsGnG0q</a>
+                
+                <!-- Topic 05 - Food & Agriculture -->
+                <a href="https://share.google/cU0S4OLlbfr6Enuta" target="_blank" rel="noopener noreferrer"><i class="fas fa-apple-alt"></i> https://share.google/cU0S4OLlbfr6Enuta</a>
+                <a href="https://share.google/Lya5dwTfwOaKvVp9O" target="_blank" rel="noopener noreferrer"><i class="fas fa-apple-alt"></i> https://share.google/Lya5dwTfwOaKvVp9O</a>
+                
+                <!-- Topic 06 - Urban Heat -->
+                <a href="https://share.google/SOdjE95qVjmkvDKfS" target="_blank" rel="noopener noreferrer"><i class="fas fa-city"></i> https://share.google/SOdjE95qVjmkvDKfS</a>
+                
+                <!-- Topic 07 - Solutions -->
+                <a href="https://share.google/vep69jms9kUiny8Wj" target="_blank" rel="noopener noreferrer"><i class="fas fa-solar-panel"></i> https://share.google/vep69jms9kUiny8Wj</a>
+                
+                <!-- Topic 08 - Why It Matters -->
+                <a href="https://share.google/xNCo0fnHHMI20kUn8" target="_blank" rel="noopener noreferrer"><i class="fas fa-seedling"></i> https://share.google/xNCo0fnHHMI20kUn8</a>
+                <a href="https://share.google/cUBMPvHuub9uECtBh" target="_blank" rel="noopener noreferrer"><i class="fas fa-seedling"></i> https://share.google/cUBMPvHuub9uECtBh</a>
+            </div>
+            
+            <!-- Footer -->
+            <footer class="footer-container">
+                <div class="footer-modern">
+                    <div class="footer-icons">
+                        <i class="fas fa-tree"></i> <i class="fas fa-solar-panel"></i> <i class="fas fa-recycle"></i>
+                    </div>
+                    <p>The Digital Green Journal — IT environment awareness project</p>
+                    <p>© 2026 The Anatomy of a Crisis</p>
+                </div>
+            </footer>
+        </div>
+        
+        <!-- BLOG SECTIONS SCREEN (8 sections) - SEPARATE SCREEN -->
+        <div id="blog-screen" style="display: none;">
+            <div style="max-width: 1400px; margin: 0 auto; padding: 0 2%;">
+
+                <div class="blog-header">
+                    <h1>Understanding Our Crisis</h1>
+                </div>
+
+                <div class="home-floating-nav">
+                    <a href="#" id="blogNavHome"><i class="fas fa-home"></i> Home</a>
+                    <a href="#" id="blogNavAbout"><i class="fas fa-info-circle"></i> About</a>
+                    <a href="#" id="blogNavBlog"><i class="fas fa-blog"></i> Blog</a>
+                    <a href="#" id="blogNavGallery"><i class="fas fa-camera"></i> Gallery</a>
+                </div>
+
+                <!-- TWO LARGE CARDS SIDE-BY-SIDE -->
+                <div class="large-cards-grid">
+                    <!-- Large Card 1 - Global Warming Causes-->
+                    <div class="large-card" id="large1">
+                        <img class="large-card-image" src="images/global-warming-causes.jpg" alt="Industrial factory emissions">
+                        <div class="large-card-content">
+                            <div class="large-card-header">
+                                <div class="large-card-icon"><i class="fas fa-industry"></i></div>
+                                <div class="large-card-title">Global warming causes</div>
+                                <div class="large-card-tag">topic 01</div>
+                            </div>
+                            <div class="large-card-text">
+                                <p><strong>Global warming is the long-term increase in Earth's average temperature, primarily caused by human activities such as burning fossil fuels, deforestation, and industrial processes. Since the Industrial Revolution, the global temperature has risen by over 1°C (about 2°F), and the last decade includes the warmest years on record. Rising temperatures are triggering extreme weather events, melting glaciers, and rising sea levels, threatening ecosystems and human societies worldwide.</strong></p>
+                                <div class="example-modern"><strong>📌 Key context:</strong> Human activities, especially the burning of fossil fuels, have rapidly increased greenhouse gas levels, causing global warming and triggering widespread climate changes with severe impacts on ecosystems, weather patterns, and human societies.</div>
+                                <div class="ref-modern">sources: <a href="https://www.nrdc.org/stories/global-warming-101" target="_blank" rel="noopener noreferrer">NRDC-Global Warming 101</a>, <a href="https://www.nationalgeographic.com/environment/article/global-warming-overview" target="_blank" rel="noopener noreferrer">National Geographic</a>, <a href="https://share.google/uJfdIcsvc8J6EX0yQ" target="_blank">Learning Geology</a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Large Card 2 - Climate Change Impact -->
+                    <div class="large-card" id="large2">
+                        <img class="large-card-image" src="images/climate-change.jpg" alt="Flooded city">
+                        <div class="large-card-content">
+                            <div class="large-card-header">
+                                <div class="large-card-icon"><i class="fas fa-water"></i></div>
+                                <div class="large-card-title">Climate change impact</div>
+                                <div class="large-card-tag">topic 02</div>
+                            </div>
+                            <div class="large-card-text">
+                                <p><strong>Climate change refers to long-term changes in the climate's average conditions or variability, typically over decades or longer. It can result from natural processes (like volcanic eruptions or solar cycles) or human activities. Human-induced climate change, primarily caused by greenhouse gas emissions from fossil fuel use, deforestation, industrial processes, and land-use changes, is driving global warming and extreme climate events worldwide.</strong></p>
+                                <div class="example-modern"><strong>🩺 Impact on health & food:</strong> Worsens heat waves, air pollution, and the spread of diseases, threatening human health, disrupts food production through droughts, floods, and changing growing conditions, putting global food security at risk.</div>
+                                <div class="ref-modern">sources: <a href="https://wmo.int/topics/climate-change/" target="_blank">World Meteorological Organization</a>, <a href="https://share.google/6QHWX7QPtkPimpvPS" target="_blank">CHEM Trust</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SMALL CARDS GRID (remaining 6 topics) -->
+                <div class="small-cards-grid" id="small-cards">
+                    <!-- Small Card 1 - Biodiversity Loss -->
+                    <div class="small-card">
+                        <img class="small-card-image" src="images/biodiversity-loss.jpg" alt="Biodiversity Loss">
+                        <div class="small-card-content">
+                            <div class="small-card-header">
+                                <div class="small-card-icon"><i class="fas fa-dove"></i></div>
+                                <div class="small-card-title">Biodiversity loss</div>
+                                <div class="small-card-tag">topic 03</div>
+                            </div>
+                            <div class="small-card-text">
+                                <p><strong>Biodiversity loss threatens the ecosystems humans rely on.</strong></p>
+                                <p><strong>Biodiversity is essential</strong> - It provides vital ecosystem services like food, water, and climate regulation.</p>
+                                <p><strong>Human activities are the main drivers</strong> - Habitat destruction, pollution, climate change, and invasive species threaten species survival.</p>
+                                <p><strong>Urgent action is needed</strong> - Conservation, sustainable practices, and global cooperation are needed to protect ecosystems.</p>
+                                <div class="ref-modern">sources: <a href="https://share.google/oSv6HBVv9RlT3JSwx">Biodiversity Loss (EN0501) - UNDRR</a>, <a href="https://share.google/wxpuSyAPeqsJAshRE">CNRS News</a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Small Card 2 - Ocean Crisis -->
+                    <div class="small-card">
+                        <img class="small-card-image" src="images/ocean-crisis.jpg" alt="Coral reef">
+                        <div class="small-card-content">
+                            <div class="small-card-header">
+                                <div class="small-card-icon"><i class="fas fa-fish"></i></div>
+                                <div class="small-card-title">Ocean crisis</div>
+                                <div class="small-card-tag">topic 04</div>
+                            </div>
+                            <div class="small-card-text">
+                                <p><strong>Oceans are vital to life, but human activities are threatening their health.</strong></p>
+                                <p><strong>Oceans are vital to life</strong> - They provide oxygen, food, and regulate the Earth's climate.</p>
+                                <p><strong>Human activities are harming oceans</strong> - Pollution, overfishing, and global warming are damaging marine ecosystems.</p>
+                                <p><strong>Urgent action is needed</strong> - Conservation efforts, sustainable practices, and reducing pollution can help restore ocean health.</p>
+                                <div class="ref-modern">sources: <a href="https://share.google/lDZfPRleEJTsGnG0q">National Geographic</a>, <a href="https://share.google/z6udQjAb7u0wnflOC">yahoo!finance</a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Small Card 3 - Food & Agriculture -->
+                    <div class="small-card">
+                        <img class="small-card-image" src="images/food-agriculture.jpg" alt="Rice field">
+                        <div class="small-card-content">
+                            <div class="small-card-header">
+                                <div class="small-card-icon"><i class="fas fa-apple-alt"></i></div>
+                                <div class="small-card-title">Food & Agriculture</div>
+                                <div class="small-card-tag">topic 05</div>
+                            </div>
+                            <div class="small-card-text">
+                                <p><strong>Our food and the climate are closely linked, and both are at risk.</strong></p>
+                                <p><strong>Agriculture drives climate change</strong> - Agriculture drives climate change</p>
+                                <p><strong>Climate change harms food production</strong> - Extreme weather, heat, and water scarcity reduce crop yields and livestock productivity.</p>
+                                <p><strong>Food security is at risk</strong> - Rising prices and reduced production make it harder for people to access sufficient and nutritious food.</p>
+                                <div class="ref-modern">sources: <a href="https://share.google/cU0S4OLlbfr6Enuta">Future Learn</a>, <a href="https://share.google/Lya5dwTfwOaKvVp9O">United Nations</a>, <a href="https://share.google/SRbJviWBuJQAzb4pX">KNN India</a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Small Card 4 - Urban Heat -->
+                    <div class="small-card">
+                        <img class="small-card-image" src="images/urban-heat.jpg" alt="Urban heat">
+                        <div class="small-card-content">
+                            <div class="small-card-header">
+                                <div class="small-card-icon"><i class="fas fa-city"></i></div>
+                                <div class="small-card-title">Urban heat</div>
+                                <div class="small-card-tag">topic 06</div>
+                            </div>
+                            <div class="small-card-text">
+                                <p><strong>Cities are getting hotter, making urban heat reduction essential.</strong></p>
+                                <p><strong>Rising Urban Temperatures</strong> - Cities in NSW are 1–3°C hotter than rural areas, with more frequent and longer extreme heat events.</p>
+                                <p><strong>Causes of Urban Heat</strong> - Heat-absorbing buildings, low vegetation, and human activities increase urban temperatures.</p>
+                                <p><strong>Urban heat impacts </strong> - The heat island effect intensifies climate change impacts, making extreme heat more severe in cities.</p>
+                                <div class="ref-modern">sources: <a href="https://share.google/SOdjE95qVjmkvDKfS">AdaptNSW</a>, <a href="https://share.google/1Kwjsls9CcHN3HrtP">Pavement Technology, Inc.</a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Small Card 5 - Solutions -->
+                    <div class="small-card">
+                        <img class="small-card-image" src="images/solutions.jpg" alt="Solar">
+                        <div class="small-card-content">
+                            <div class="small-card-header">
+                                <div class="small-card-icon"><i class="fas fa-solar-panel"></i></div>
+                                <div class="small-card-title">Solutions</div>
+                                <div class="small-card-tag">topic 07</div>
+                            </div>
+                            <div class="small-card-text">
+                                <p><strong>Climate change and Global warming can be addressed through a combination of natural, technological, political, and community-based solutions.</strong></p>
+                                <p><strong>Nature-based</strong> - Protecting, restoring, and sustainably managing ecosystems helps absorb carbon dioxide and reduce climate risks. </p>
+                                <p><strong>Technological</strong> - Use clean energy and efficient technologies.</p>
+                                <p><strong>Community</strong> - Communities can promote recycling, conservation, and local sustainability efforts to lower their environmental impact.</p>
+                                <div class="ref-modern">sourcers: <a href="https://share.google/vep69jms9kUiny8Wj">CONCERN Worldwide</a>, <a href="https://share.google/2E6aM1ihI2HKEurzd">Climate Resilience Portal</a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Small Card 6 - Why Matters -->
+                    <div class="small-card">
+                        <img class="small-card-image" src="images/why-it-matters.jpg" alt="Forest">
+                        <div class="small-card-content">
+                            <div class="small-card-header">
+                                <div class="small-card-icon"><i class="fas fa-seedling"></i></div>
+                                <div class="small-card-title">Why it matters</div>
+                                <div class="small-card-tag">topic 08</div>
+                            </div>
+                            <div class="small-card-text">
+                                <p><strong>Our planet, our responsibility!</strong></p>
+                                <p>Valuing nature is essential because it provides the food, water, air, and resources that sustain human life and economies. Protecting and restoring ecosystems also helps combat climate change, preserve biodiversity, and reduce the impact of natural disasters. By recognizing the true value of nature, we can make sustainable choices that benefit both people and the planet. Acting now ensures a healthier and more resilient future for generations to come.</p>
+                                <div class="ref-modern">sources: <a href="https://share.google/xNCo0fnHHMI20kUn8">Shorthand</a>, <a href="https://share.google/cUBMPvHuub9uECtBh">WWF</a>, <a href="https://share.google/U1gApwKhnjE6du47z">Articles - Mind Foundation</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conclusion Section -->
+            <div class="conclusion-section glass" style="margin-top: 3rem; margin-bottom: 2rem; padding: 2rem 2.5rem; background: linear-gradient(135deg, #3a4e38 0%, #2d3e2b 100%); border-left: 6px solid #bbda9e;">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1.5rem;">
+                    <i class="fas fa-hands-helping" style="font-size: 2.5rem; color: #bbda9e;"></i>
+                    <h2 style="font-family: 'Fraunces', serif; font-size: 2rem; color: #bbda9e; margin: 0;">Our Shared Responsibility</h2>
+                </div>
+                
+                <div style="margin-bottom: 1.5rem;">
+                    <p style="font-size: 1.1rem; line-height: 1.7; color: #d4d4c8; margin-bottom: 1rem;">
+                        The challenges of global warming, climate change, and biodiversity loss remind us of a simple truth: we are part of nature, not separate from it. What happens to the planet happens to us. Every rise in temperature, every species lost, and every polluted ocean reflects the choices we have made, but it also shows that we still have the power to choose differently.
+                    </p>
+                    
+                    <p style="font-size: 1.1rem; line-height: 1.7; color: #d4d4c8; margin-bottom: 1rem;">
+                        This is not only a crisis, but also a moment for change. It gives us the chance to rethink how we live, what we consume, and how we care for the world around us. Change can feel overwhelming, but even small actions, when done by many people, can lead to real impact.
+                    </p>
+                    
+                    <p style="font-size: 1.1rem; line-height: 1.7; color: #d4d4c8; margin-bottom: 1rem;">
+                        There is still time to protect what we have and restore what has been damaged. By working together, staying informed, and making thoughtful decisions, we can create a future where both people and the planet can live and grow in a healthy, balanced way.
+                    </p>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
+                    <div style="background: rgba(0, 0, 0, 0.2); padding: 1.2rem; border-radius: 16px; text-align: center;">
+                        <i class="fas fa-power-off" style="font-size: 2rem; color: #bbda9e; margin-bottom: 0.8rem; display: inline-block;"></i>
+                        <h4 style="color: #bbda9e; margin-bottom: 0.5rem;">We Have the Power</h4>
+                        <p style="color: #d4d4c8; font-size: 0.9rem;">The challenges we face reflect our choices and we still have the power to choose differently.</p>
+                    </div>
+                    
+                    <div style="background: rgba(0, 0, 0, 0.2); padding: 1.2rem; border-radius: 16px; text-align: center;">
+                        <i class="fas fa-seedling" style="font-size: 2rem; color: #bbda9e; margin-bottom: 0.8rem; display: inline-block;"></i>
+                        <h4 style="color: #bbda9e; margin-bottom: 0.5rem;">Small Actions Matter</h4>
+                        <p style="color: #d4d4c8; font-size: 0.9rem;">Change can feel overwhelming, but small actions, multiplied by many, create real impact.</p>
+                    </div>
+                    
+                    <div style="background: rgba(0, 0, 0, 0.2); padding: 1.2rem; border-radius: 16px; text-align: center;">
+                        <i class="fas fa-globe-asia" style="font-size: 2rem; color: #bbda9e; margin-bottom: 0.8rem; display: inline-block;"></i>
+                        <h4 style="color: #bbda9e; margin-bottom: 0.5rem;">Create a Balanced Future</h4>
+                        <p style="color: #d4d4c8; font-size: 0.9rem;">By working together and staying informed, we can build a future where people and nature thrive.</p>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid rgba(187, 218, 158, 0.3); text-align: center;">
+                    <p style="color: #a8b89a; font-size: 0.8rem;">
+                        <i class="fas fa-leaf"></i> This blog is part of a student project exploring the intersection of IT and environmental awareness.<br>
+                        Every source is credited. Together, we learn. Together, we act.
+                    </p>
+                </div>
+            </div>
+            </div>
+        </main>
+
+    <div id="gallery-screen">
+        <div class="home-floating-nav">
+            <a href="#" id="galleryNavHome"><i class="fas fa-home"></i> Home</a>
+            <a href="#" id="galleryNavAbout"><i class="fas fa-info-circle"></i> About</a>
+            <a href="#" id="galleryNavBlog"><i class="fas fa-blog"></i> Blog</a>
+            <a href="#" id="galleryNavGallery"><i class="fas fa-camera"></i> Gallery</a>
+        </div>
+
+        <div class="gallery-header">
+            <h1><i class="fas fa-camera"></i> Witnessing Change: A Climate Gallery</h1>
+            <p>Witnessing change through photography that educates, inspires, and calls to action</p>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid">
+            <!-- Gallery items will be populated by JavaScript -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Toggle mobile references dropdown
+        function toggleMobileRefs() {
+            const content = document.getElementById('mobileRefContent');
+            const header = document.querySelector('.mobile-ref-header');
+            
+            if (content && header) {
+                if (content.classList.contains('show')) {
+                    content.classList.remove('show');
+                    header.classList.remove('active');
+                } else {
+                    content.classList.add('show');
+                    header.classList.add('active');
+                }
+            }
+        }
+
+        // Close dropdown when clicking outside (optional)
+        document.addEventListener('click', function(event) {
+            const dropdown = document.querySelector('.mobile-ref-dropdown');
+            const header = document.querySelector('.mobile-ref-header');
+            
+            if (dropdown && !dropdown.contains(event.target)) {
+                const content = document.getElementById('mobileRefContent');
+                if (content && content.classList.contains('show')) {
+                    content.classList.remove('show');
+                    if (header) header.classList.remove('active');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
